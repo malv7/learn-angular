@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { JokeModule } from './joke/joke.module';
+import { TourOfHeroesModule } from './tour-of-heroes/tour-of-heroes.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { JokeModule } from './joke/joke.module';
   imports: [
     BrowserModule,
     HttpModule,
-    JokeModule
+    JokeModule,
+    TourOfHeroesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
