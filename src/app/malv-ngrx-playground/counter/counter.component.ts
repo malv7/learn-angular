@@ -11,7 +11,7 @@ interface AppState {
 @Component({
     selector: 'ngrx-counter',
     template: `
-        <h1 class="subtitle">Current Count: {{ (counter | async).counter }}</h1>
+        <h1 class="subtitle">ngrx counter: {{ (counter | async).counter }}</h1>
         <button class="button" (click)="increment()">Increment</button>
         <button class="button" (click)="decrement()">Decrement</button>
         <button class="button" (click)="reset()">Reset Counter</button>
