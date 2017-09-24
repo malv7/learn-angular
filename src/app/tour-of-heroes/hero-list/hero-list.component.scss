@@ -1,0 +1,10 @@
+$selected: #E9E9E9;
+
+tr:hover {
+    cursor: pointer;
+    background-color: $selected;  
+}
+
+.selected {
+    background-color: $selected;
+}

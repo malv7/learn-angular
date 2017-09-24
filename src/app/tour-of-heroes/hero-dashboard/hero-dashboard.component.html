@@ -1,0 +1,8 @@
+<div class="level">
+    <div class="level-item has-text-centered" *ngFor="let hero of heroes">
+        <div (click)="goToDetail(hero)">
+            <p class="heading">{{hero.id}}</p>
+            <p class="title hover">{{hero.name}}</p>
+        </div>
+    </div>
+</div>

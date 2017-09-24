@@ -1,0 +1,16 @@
+<a class="button is-small is-warning" (click)="goBack()">
+  <span class="icon">
+    <i class="fa fa-arrow-left"></i>
+  </span>
+</a>
+<div [ngStyle]="{ 'margin-top': '20px' }"></div>
+<div *ngIf="hero">
+  <h2 class="subtitle">{{hero.name}} details!</h2>
+  <div>
+    <strong>ID: </strong>{{hero.id}}
+  </div>
+  <div>
+    <label class="label">Name</label>
+    <input [(ngModel)]="hero.name" [ngStyle]="{ 'width': '250px' }" class="input is-small" placeholder="name" />
+  </div>
+</div>
