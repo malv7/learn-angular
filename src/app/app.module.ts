@@ -13,6 +13,11 @@ import { AppComponent } from './app.component';
 import { HeroListComponent } from './tour-of-heroes/hero-list/hero-list.component';
 import { HeroDashboardComponent } from './tour-of-heroes/hero-dashboard/hero-dashboard.component';
 
+// Malv ngrx playground
+import { MalvNgrxModule } from './malv-ngrx-playground/malv-ngrx.module';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './malv-ngrx-playground/counter/counter.reducers';
+
 const routes: Routes = [
   {
     path: '',
@@ -30,7 +35,9 @@ const routes: Routes = [
     HttpModule,
     JokeModule,
     RouterModule.forRoot(routes),
-    TourOfHeroesModule
+    TourOfHeroesModule,
+    MalvNgrxModule,
+    StoreModule.forRoot({ counter: counterReducer })
   ],
   providers: [],
   bootstrap: [ AppComponent ]
