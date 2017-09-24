@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JokeService } from '../joke.service';
+import { JokeService } from './joke.service';
 
 @Component({
   selector: 'app-joke',
@@ -12,6 +12,10 @@ export class JokeComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  getJoke() {
+    this.jokeService.getJoke();
   }
 
 }

@@ -1,4 +1,3 @@
-<div [ngStyle]="{ 'margin-top': '20px' }"></div>
-
 <h3 class="title">Joke Component</h3>
-<p>{{ jokeService.joke$ | async }}</p>
+<button class="button" (click)="getJoke()">Get Joke</button>
+<div class="notification">{{ jokeService.joke$ | async }}</div>

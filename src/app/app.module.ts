@@ -3,19 +3,18 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { JokeComponent } from './joke/joke.component';
-import { JokeService } from './joke.service';
+import { JokeModule } from './joke/joke.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    JokeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    JokeModule
   ],
-  providers: [ JokeService ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
