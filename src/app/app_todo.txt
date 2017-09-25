@@ -1,1 +1,2 @@
 - ngrx-effects / ngrx-dev-tools
+- global logger
