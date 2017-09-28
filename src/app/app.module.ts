@@ -1,3 +1,6 @@
+import { GenericFormsModule } from './generic-forms/generic-forms.module';
+import { FormsModule } from '@angular/forms';
+
 // Angular modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -32,13 +35,16 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule,
     JokeModule,
     RouterModule.forRoot(routes),
     TourOfHeroesModule,
     MalvNgrxModule,
+    GenericFormsModule,
     StoreModule.forRoot({ counter: counterReducer })
   ],
+  exports: [FormsModule],
   providers: [],
   bootstrap: [ AppComponent ]
 })
