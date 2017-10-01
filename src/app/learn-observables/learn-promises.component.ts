@@ -1,17 +1,18 @@
 import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
+// operators
 import 'rxjs/add/observable/interval';
-import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/delay';
 import 'rxjs/add/operator/mapTo';
+import 'rxjs/add/operator/map';
 
 @Component({
     selector: 'promise',
-    template: `<div>Geheime Daten</div>`,
+    template: ``,
     styles: [``]
 })
-export class PromiseComponent {
+export class LearnPromisesComponent {
     
     constructor() { 
         
