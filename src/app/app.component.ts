@@ -4,11 +4,8 @@ import { JokeService } from './joke/joke.service';
 @Component({
   selector: 'app-root',
   template: `
-    <div>{{binding}}</div>
-    <div class="text">text!</div>
-    <learn-graphics class="graphics">
-      shdfpishdpfsdif
-    </learn-graphics>
+    <div class="text">WebGL!</div>
+    <learn-graphics class="graphics"></learn-graphics>
   `,
   styles: [`
     .text { 
@@ -17,18 +14,15 @@ import { JokeService } from './joke/joke.service';
       position: absolute; 
       margin-top: 100px;
       margin-left: 30px;
-      font-size: 72px;
+      font-size: 36px;
     }
     .text:hover {
-      color: red;
+      background: grey;
     }
     .graphics { z-index: 1 }
   `]
 })
 export class AppComponent {
-
-  n = [1,2,3,4];
-  binding;
 
   constructor() { }
 

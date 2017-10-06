@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 // Feature modules
 import { LearnObservablesModule } from './learn-observables/learn-observables.module';
+import { LearnTypescriptModule } from './learn-typescript/learn-typescript.module';
 import { LearnGraphicsModule } from './learn-graphics/learn-graphics.module';
 import { TourOfHeroesModule } from './tour-of-heroes/tour-of-heroes.module';
 import { JokeModule } from './joke/joke.module';
@@ -56,6 +57,7 @@ const routes: Routes = [
     DirectivesModule,
     StoreModule.forRoot({ counter: counterReducer }),
     LearnGraphicsModule,
+    LearnTypescriptModule,
   ],
   exports: [ FormsModule ],
   providers: [ FirebaseService ],

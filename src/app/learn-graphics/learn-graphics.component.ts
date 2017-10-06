@@ -34,18 +34,8 @@ export class LearnGraphicsComponent {
             let g = new THREE.SphereGeometry(i * 0.5, 8, 8);
             let m = new THREE.Mesh(g, material);
             spheres.push(m);
-            //scene.add(m)
+            scene.add(m)
         }
-
-        var geometry = new THREE.Geometry();
-        geometry.vertices.push(new THREE.Vector3(2, 0, 0));
-        geometry.vertices.push(new THREE.Vector3(0, 0.1, 0));
-        geometry.vertices.push(new THREE.Vector3(2, 0, 0));
-        geometry.vertices.push(new THREE.Vector3(0.1, 2, 0));
-
-        var lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 100 });
-        var line = new THREE.Line(geometry, lineMaterial);
-        scene.add(line)
 
         let lf = window.performance.now();
         let fps = 0;

@@ -30,10 +30,6 @@ export class FirebaseService {
             });
 
         this.o.subscribe(x => console.log(x));
-        let x: Malv;
-        // x.name = "as";
-        // x.ding = 9;
-        // console.log(x);
     }
 
 
