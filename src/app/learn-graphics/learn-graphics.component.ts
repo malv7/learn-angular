@@ -24,15 +24,16 @@ export class LearnGraphicsComponent {
         document.body.appendChild(renderer.domElement);
         camera.position.z = 5;
 
-        const material = new THREE.MeshBasicMaterial({
-            color: 0x0091FF,
-            wireframe: true
-        });
+        const m1 = new THREE.MeshBasicMaterial({ color: 0xffcc00, wireframe: true });
+        const m2 = new THREE.MeshBasicMaterial({ color: 0x00fff8, wireframe: true });
+        const m3 = new THREE.MeshBasicMaterial({ color: 0xffcc00, wireframe: true });
 
+        const materials: THREE.MeshBasicMaterial[] = [m1, m2, m3];
+        
         const spheres: THREE.Mesh[] = [];
         for (let i = 1; i < 4; i++) {
             let g = new THREE.SphereGeometry(i * 0.5, 8, 8);
-            let m = new THREE.Mesh(g, material);
+            let m = new THREE.Mesh(g, materials[i-1]);
             spheres.push(m);
             scene.add(m)
         }
