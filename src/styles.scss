@@ -1,5 +1,9 @@
-@import "~bulma/sass/utilities/initial-variables";
+// @import "~bulma/sass/utilities/initial-variables";
+// $primary: #ffdd57;
+// @import '~bulma/bulma';
 
-$primary: #ffdd57;
-
-@import '~bulma/bulma';
+body {
+    // overflow: hidden;
+    padding: 0;
+    margin: 0;
+}

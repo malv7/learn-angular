@@ -10,10 +10,14 @@ import { LearnObservablesModule } from './learn-observables/learn-observables.mo
 import { LearnTypescriptModule } from './learn-typescript/learn-typescript.module';
 import { LearnGraphicsModule } from './learn-graphics/learn-graphics.module';
 import { TourOfHeroesModule } from './tour-of-heroes/tour-of-heroes.module';
+import { SlitesModule } from './slites/slites.module';
 import { JokeModule } from './joke/joke.module';
+
+
 // ngrx
 import { StoreModule } from '@ngrx/store';
 import { LearnNgrxModule } from './learn-ngrx/learn-ngrx.module';
+// reducers
 import { counterReducer } from './learn-ngrx/counter/counter.reducers';
 
 // Directives
@@ -30,10 +34,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FirebaseService } from './learn-firebase/firebase.service';
 
+
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/dashboard',
+    // redirectTo: '/dashboard',
+    redirectTo: '',
     pathMatch: 'full'
   }
 ];
@@ -44,20 +50,25 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot(routes),
+    StoreModule.forRoot({
+      counter: counterReducer
+    }),
     // AngularFireModule.initializeApp(firebaseConfig, 'learn-angular'),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    FormsModule,
-    HttpModule,
+    DirectivesModule,
+
+    // Feature Modules
     JokeModule,
-    RouterModule.forRoot(routes),
     TourOfHeroesModule,
     LearnNgrxModule,
     LearnObservablesModule,
-    DirectivesModule,
-    StoreModule.forRoot({ counter: counterReducer }),
     LearnGraphicsModule,
     LearnTypescriptModule,
+    SlitesModule    
   ],
   exports: [ FormsModule ],
   providers: [ FirebaseService ],

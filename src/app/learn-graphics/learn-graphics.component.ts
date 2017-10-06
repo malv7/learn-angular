@@ -4,7 +4,7 @@ import { NgZone, Output } from '@angular/core';
 
 @Component({
     selector: 'learn-graphics',
-    template: `<div id="fps"></div>`,
+    template: `<!-- <div id="fps"></div> -->`,
     styles: [``]
 })
 export class LearnGraphicsComponent {
@@ -63,6 +63,11 @@ export class LearnGraphicsComponent {
                 s.scale.y += 0.0001;
                 s.scale.z += 0.0001;
             });
+
+            const calcs = 1000000;
+            for(let i = 0; i < calcs; i++) {
+                let t = (i * 740394) % 4;
+            }
 
             renderer.render(scene, camera);
         };
