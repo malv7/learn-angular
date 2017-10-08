@@ -7,7 +7,7 @@ export interface Slite {
 export const SLITES: Slite[] = [
     
     {
-        topic: `Todays topics`,
+        topic: `Todays topics!`,
         answer: `apps → browsers → node → code`
     },
     { 
