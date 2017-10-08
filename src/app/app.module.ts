@@ -12,7 +12,7 @@ import { LearnGraphicsModule } from './learn-graphics/learn-graphics.module';
 import { TourOfHeroesModule } from './tour-of-heroes/tour-of-heroes.module';
 import { SlitesModule } from './slites/slites.module';
 import { JokeModule } from './joke/joke.module';
-
+import { LearnFlexboxModule } from './learn-flexbox/learn-flexbox.module';
 
 // ngrx
 import { StoreModule } from '@ngrx/store';
@@ -68,7 +68,8 @@ const routes: Routes = [
     LearnObservablesModule,
     LearnGraphicsModule,
     LearnTypescriptModule,
-    SlitesModule    
+    SlitesModule,
+    LearnFlexboxModule
   ],
   exports: [ FormsModule ],
   providers: [ FirebaseService ],

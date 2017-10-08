@@ -15,7 +15,7 @@ export const SLITES: Slite[] = [
     },
     { 
         topic: 'To capture it briefly', 
-        answer: `Diversity in browsers, devices and screen resolutions, ..., template, styles, EcmaScript versions, JavaScript, TypeScript, transpiler, modules, 
+        answer: `Diversity in browsers, devices and screen resolutions, ..., templates, styles, EcmaScript versions, JavaScript, TypeScript, transpiler, modules, 
                  dependencies, polyfills, bundler, ..., unit & integration testing, efficient data layer, observables, * third party / framework specific *, ..., 
                  continuos integration, deploy, documentation, network, security, ..., visual appeareance, usability, components, redux, ...`,
         appendix: `which all concerns front end...`
@@ -25,6 +25,9 @@ export const SLITES: Slite[] = [
     },
     {
         topic: `TS & JS`
+    },
+    {
+        topic: `VSCode`
     },
     {
         topic: `ng`

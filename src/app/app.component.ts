@@ -4,11 +4,13 @@ import { JokeService } from './joke/joke.service';
 @Component({
   selector: 'app-root',
   template: `
+    
     <div class="text" (click)="toggle()"><i class="fa fa-superpowers fa-2x" aria-hidden="true"></i></div>
     <div class="text" id="fps"></div>
     <learn-graphics class="graphics" *ngIf="graphics"></learn-graphics>
-    <!-- <learn-ngrx></learn-ngrx> -->
     <slites *ngIf="!graphics"></slites>
+    
+    <!-- <learn-ngrx></learn-ngrx> -->
     `,
   styles: [`
     .text { 

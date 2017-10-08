@@ -15,7 +15,6 @@ interface AppState {
     template: `
         <h1 class="subtitle">counter: {{ (counter | async).counter }}</h1>
         <h1 class="subtitle">resets: {{ (counter | async).resets }}</h1>
-        <h1 class="subtitle">advanced: {{ (counter | async).advanced | json }}</h1>
         <button class="button" (click)="increment()">Increment</button>
         <button class="button" (click)="decrement()">Decrement</button>
         <button class="button" (click)="reset()">Reset Counter</button>
@@ -29,7 +28,6 @@ export class CounterComponent {
     constructor(private store: Store<AppState>) {
         this.counter = store.select('counter');
         this.other = store.select('other');
-        Observable.timer(6000).subscribe(() => this.advanced());
     }
 
     increment() {
@@ -44,9 +42,4 @@ export class CounterComponent {
         this.store.dispatch(new Counter.Reset(0));
     }
 
-    advanced() {
-        const advancedData = new AdvancedData("#1", "malv", 100);
-        this.store.dispatch(new Counter.Advanced(advancedData));
-        // this.store.dispatch(new Counter.Advanced());
-    }
 }

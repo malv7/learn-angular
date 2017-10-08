@@ -1,15 +1,13 @@
-import { LearnNgrxComponent } from './learn-ngrx.component';
-import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 // Components
+import { AdvancedCounterComponent } from './counter/advanced-counter.component';
 import { CounterComponent } from "./counter/counter.component";
+import { LearnNgrxComponent } from './learn-ngrx.component';
 
 @NgModule({
-    imports: [ 
-        BrowserModule,
-    ],
+    imports: [ BrowserModule ],
     exports: [ LearnNgrxComponent ],
-    providers: [],
-    declarations: [ LearnNgrxComponent, CounterComponent ]
+    declarations: [ LearnNgrxComponent, CounterComponent, AdvancedCounterComponent ]
 })
 export class LearnNgrxModule { }

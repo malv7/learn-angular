@@ -1,0 +1,51 @@
+.all {
+    width: 100vw;
+    height: 100vh;
+    background: #00FFC8;
+}
+
+.all:nth-child(even) {
+    background: #FFD900;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+}
+
+.box-wrapper {
+    width: 1280px;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 30%;
+    height: 50%;
+    background: #4572A2;
+}
+
+.box:nth-child(even) {
+    background: #FFFF92;
+}
+
+.innerBox {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+}
+
+//
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+}

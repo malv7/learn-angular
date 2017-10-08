@@ -1,3 +1,3 @@
-# Learn Angular
+# Learn ng.
 
-Learn Angular.
+The current state of the app is online at http://malv.info.

@@ -1,38 +1,31 @@
 import { AdvancedData } from './advanced-data-model';
 import * as CounterActions from './counter.actions';
 
-interface FixState {
+export type Action = CounterActions.All;
+
+interface NumberFunc {
+  (num?: number): State;
+}
+
+interface State {
     counter: number,
     resets: number,
     advanced?: AdvancedData
 }
 
-class Malv {
-  public name: string;
-
-  constructor(name?: string) {
-    if(name) this.name = name;
-  }
-}
-
-const initialState: FixState = {
+const initialState: State = {
     counter: 0,
     resets: 0,
 }
 
-// TODO: alternatively introduce a Action type for the reducer function argument action
-// export type Action = CounterActions.All;
-// export function counterReducer(state = initialState, action: Action): State {
-export function counterReducer(state = initialState, action: CounterActions.All): FixState {
+export function counterReducer(state = initialState, action: Action): State {
 
-  const increment = () => {
-    const x = 1;
-    return { ...state, counter: state.counter + 1 + x };
-  };
+  // Pure increment function
+  const increment: NumberFunc = () => ({ ...state, counter: state.counter + 1 });
 
   switch(action.type) {
 
-    case CounterActions.INCREMENT:{ 
+    case CounterActions.INCREMENT: { 
       return increment(); 
     }
 
